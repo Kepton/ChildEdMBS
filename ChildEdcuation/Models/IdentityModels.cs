@@ -10,8 +10,10 @@ namespace ChildEdcuation.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection")
+            : base("DataConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<ChildEdcuation.Models.StudentModels> StudentModels { get; set; }
     }
 }
